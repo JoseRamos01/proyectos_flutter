@@ -44,10 +44,11 @@ Widget build(BuildContext context) {
             Padding(padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
             child: Row(
                 children: <Widget> [
-                  ImageIcon(
+            Padding(padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                child: ImageIcon(
                     AssetImage('assets/images/mail.png'),
-                    ),
-                  Text('Mail', style: TextStyle(
+                    )),
+                  Text('jmramoslemes@gmail.com', style: TextStyle(
                     fontSize: 24,
                     color: Colors.black,
                   ),
@@ -58,10 +59,11 @@ Widget build(BuildContext context) {
             Padding(padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
               child: Row(
                   children: <Widget> [
-                    ImageIcon(
+              Padding(padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                child: ImageIcon(
                       AssetImage('assets/images/wpp.png'),
-                    ),
-                    Text('Phone', style: TextStyle(
+                    )),
+                    Text('095880709', style: TextStyle(
                       fontSize: 24,
                       color: Colors.black,
                     ),
@@ -72,10 +74,12 @@ Widget build(BuildContext context) {
             Padding(padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
               child: Row(
                   children: <Widget> [
-                    ImageIcon(
+                    Padding(padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                    child: ImageIcon(
                       AssetImage('assets/images/linkedin.png'),
+                    )
                     ),
-                    Text('Linkedin', style: TextStyle(
+                    Text('linkedin.com/jose.ramos', style: TextStyle(
                       fontSize: 24,
                       color: Colors.black,
                     ),
