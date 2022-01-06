@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:async';
-
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -72,6 +72,7 @@ Future<PersonalInfo> fetchPersonalInfo() async {
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Scaffold(
       backgroundColor: Color.fromRGBO(186, 231, 243, 0.9),
       body: SafeArea(
@@ -215,7 +216,8 @@ Widget build(BuildContext context) {
                 children: <Widget> [
                   Center(
                     child: IconButton(
-                      icon: ImageIcon(AssetImage('assets/images/like.png')
+                      icon: Bounce(child: ImageIcon(AssetImage('assets/images/like.png'),),
+                        infinite: true,
                     ),
                       onPressed: () { incrementCounter(); },
                       iconSize: 50,
