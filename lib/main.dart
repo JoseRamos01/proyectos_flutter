@@ -4,14 +4,16 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:proyectos_flutter/avatar.dart';
+import 'package:proyectos_flutter/icons/like_icon.dart';
+import 'package:proyectos_flutter/icons/linkedin_icon.dart';
 import 'package:proyectos_flutter/icons/mail_icon.dart';
+import 'package:proyectos_flutter/icons/phone_icon.dart';
 import 'package:proyectos_flutter/styles.dart';
 
 import 'personal_info.dart';
 
 void main() => runApp(const MyApp());
 
-//Quitar los futures y formatear el codigo Jose , Moved widgets to other files
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -89,8 +91,7 @@ class _BusinessCard extends State<MyApp> {
                                     child: Text(
                                         '$_counter'
                                         ' personas recomiendan este profesional',
-                                        style: Styles.recommendStyle
-                                    ),
+                                        style: Styles.recommendStyle),
                                   ),
                                   Padding(
                                     padding:
@@ -108,13 +109,7 @@ class _BusinessCard extends State<MyApp> {
                                     padding:
                                         const EdgeInsets.fromLTRB(20, 10, 0, 0),
                                     child: Row(children: <Widget>[
-                                      const Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(0, 0, 10, 0),
-                                          child: ImageIcon(
-                                            AssetImage('assets/images/wpp.png'),
-                                            size: 25,
-                                          )),
+                                      const PhoneIcon(),
                                       Text(
                                         snapshot.data!.phoneNumber,
                                         style: Styles.contactStyle,
@@ -126,14 +121,7 @@ class _BusinessCard extends State<MyApp> {
                                     padding:
                                         const EdgeInsets.fromLTRB(20, 10, 0, 0),
                                     child: Row(children: <Widget>[
-                                      const Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(0, 0, 10, 0),
-                                          child: ImageIcon(
-                                            AssetImage(
-                                                'assets/images/linkedin.png'),
-                                            size: 26,
-                                          )),
+                                      const LinkedinIcon(),
                                       Text(
                                         snapshot.data!.linkedin,
                                         style: Styles.contactStyle,
@@ -149,10 +137,7 @@ class _BusinessCard extends State<MyApp> {
                                       Center(
                                         child: IconButton(
                                           icon: Bounce(
-                                            child: const ImageIcon(
-                                              AssetImage(
-                                                  'assets/images/like.png'),
-                                            ),
+                                            child: const LikeIcon(),
                                             infinite: true,
                                           ),
                                           onPressed: incrementCounter,

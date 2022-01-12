@@ -17,5 +17,4 @@ abstract class Styles {
     fontSize: 22,
     color: Colors.black,
   );
-
 }
