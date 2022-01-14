@@ -19,7 +19,12 @@ class PersonRow extends StatelessWidget {
           );
         },
         child: Container(
-          padding: const EdgeInsets.fromLTRB(10, 10, 10, 5),
+          padding: const EdgeInsets.fromLTRB(
+            10,
+            10,
+            10,
+            5,
+          ),
           child: Row(
             children: [
               CircleAvatar(

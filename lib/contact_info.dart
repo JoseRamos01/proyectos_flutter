@@ -21,7 +21,8 @@ class Contact extends StatelessWidget {
   }
 
   void _launchPhoneUrl() async {
-    if (!await launch('tel:$phoneNumber')) throw 'Could not launch $phoneNumber';
+    if (!await launch('tel:$phoneNumber'))
+      throw 'Could not launch $phoneNumber';
   }
 
   void _launchMailUrl() async {
@@ -32,22 +33,22 @@ class Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Padding(
-        padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+        padding: const EdgeInsets.fromLTRB(20, 10, 0, 0,),
         child: GestureDetector(
           onTap: _launchMailUrl,
-        child: Row(children: <Widget>[
-          const MailIcon(),
-          Text(
-            // snapshot.data!.email,
-            email,
-            style: Styles.contactStyle,
-            textAlign: TextAlign.center,
-          ),
-        ]),
+          child: Row(children: <Widget>[
+            const MailIcon(),
+            Text(
+              // snapshot.data!.email,
+              email,
+              style: Styles.contactStyle,
+              textAlign: TextAlign.center,
+            ),
+          ]),
         ),
       ),
       Padding(
-        padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+        padding: const EdgeInsets.fromLTRB(20, 10, 0, 0,),
         child: GestureDetector(
           onTap: _launchPhoneUrl,
           child: Row(children: <Widget>[
@@ -62,7 +63,7 @@ class Contact extends StatelessWidget {
         ),
       ),
       Padding(
-        padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+        padding: const EdgeInsets.fromLTRB(20, 10, 0, 0,),
         child: GestureDetector(
           onTap: _launchLinkedinURL,
           child: Row(children: <Widget>[

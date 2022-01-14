@@ -25,7 +25,7 @@ class _Recommended extends State<LikesCounter> {
         child: Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.fromLTRB(25, 10, 25, 25),
+          padding: const EdgeInsets.fromLTRB(25, 10, 25, 25,),
           child: Text(
               '$_likesCounter'
               ' likes',
