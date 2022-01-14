@@ -17,4 +17,8 @@ abstract class Styles {
     fontSize: 22,
     color: Colors.black,
   );
+  static const TextStyle rowStyle = TextStyle(
+    fontSize: 24,
+    color: Colors.white70,
+  );
 }
